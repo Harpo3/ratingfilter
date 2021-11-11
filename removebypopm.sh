@@ -42,7 +42,7 @@ Group        Rating Stars    POPM Val  POPM Range Assumed
 EOF
 }
 outputfile=$"$HOME/.popmfiltered.dsv"
-popmmin=64
+popmmin=1
 popmmax=255
 mydelimiter="^"
 excludeheader="no"
