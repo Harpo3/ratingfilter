@@ -12,7 +12,7 @@ options:
 -h display this help file
 -n exclude output file header where input file contains header
 -o specify output file and path (default: $HOME/.popmfiltered.dsv)
--p specify lowest POPM rating number for output (default: 64)
+-p specify lowest POPM rating number for output (default: 1)
 -r specify highest POPM rating number for output (default: 255)
 
 Uses awk to filter music library tracks by POPM field when POPM is 
@@ -22,22 +22,22 @@ included in the input database. Output is a data-separated-values
 Specify input database FILE (musicbase db) and POPMCOL (column number 
 containing POPM values). 
 
-POPM values of zero or blank, and less than 64 are filtered by default. 
+POPM values of zero or blank are filtered by default. 
 Specify a different POPM minimum value and/or a lower maximum value 
 than the default of 255. 
 
 Output file uses headers and carat delimiter unless otherwise specified. 
 Output is $HOME/.popmfiltered.dsv unless otherwise specified.
 
-Some suggested ranges for popularimeter (POPM) rating categories:
+Some suggested ranges for popularimeter (POPM) rating categories, used by
+Kid3, Windows Media Player, and Winamp:
 
-"five stars"  popularimeter 230-255, set to 255
-"four stars"  popularimeter 192-229, set to 204
-"3 ½ stars"   popularimeter 166-191, set to 179
-"three stars" popularimeter 136-165, set to 153
-"2 ½ stars"   popularimeter 110-135, set to 118
-"two stars"   popularimeter 64-109, set to 64
-"one star"    popularimeter 1-63, set to 32
+Group        Rating Stars    POPM Val  POPM Range Assumed
+1            One             1         1-32
+2            Two             64        33-96 
+3            Three           128       97-160
+4            Four            196       161-228
+5            Five            255       229-255
 
 EOF
 }
