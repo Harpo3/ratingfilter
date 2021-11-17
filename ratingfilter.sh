@@ -5,7 +5,7 @@ cat << 'EOF'
 
 A musicbase utility to generate filtered output based on POPM rating values
 
-Usage: removebypopm.sh [option] FILE POPMCOL
+Usage: ratingfilter.sh [option] FILE POPMCOL
 
 options:
 -d specify delimiter (default: ^)
