@@ -2,4 +2,6 @@
 A musicbase utility to generate filtered output based on popularimeter (POPM)
 rating values
 
-Produces a rating-filtered database file (default: $HOME/.popmfiltered.dsv). It uses the database produced with musicbase.sh as FILE, and the POPMCOL (column) containing the POPM values. POPM values of zero or blank  are filtered by default. Max is 255. Users can specify different POPM minimum and/or maximum values. Output file uses headers and carat delimiter unless otherwise specified. POPM min and max defaults can be set globally by creating a file $HOME/.musicbase.conf
+Produces a rating-filtered database file (default: $HOME/.popmfiltered.dsv). Uses awk to filter music library tracks by POPM field when POPM is 
+included in the input database. Default input file is $HOME/.musiclib.dsv. Output is a data-separated-values (DSV) file with carat "^" (or other 
+specified) delimiter. Output file, by default, uses uses headers and carat delimiter. See help file for all options.
